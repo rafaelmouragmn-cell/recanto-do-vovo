@@ -1,0 +1,398 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* BARRA DE NAVEGAÇÃO */
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    min-height: 70px;
+    padding: 5px 4%;
+    gap: 25px;
+
+    background-color: #ffffff;
+}
+
+/* LOGO */
+
+.logo {
+    width: 220px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+}
+
+/* MENU DE NAVEGAÇÃO */
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex: 1;
+}
+
+#nav a {
+    position: relative;
+    text-decoration: none;
+
+    color: #606b7a;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+
+    padding-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+
+#nav a:hover {
+    color: #A6192E;
+}
+
+/* LINHA ANIMADA */
+
+#nav a::after {
+    content: "";
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 0;
+    height: 3px;
+
+    background-color: #A6192E;
+    border-radius: 10px;
+
+    transition: width 0.3s ease;
+}
+
+#nav a:hover::after {
+    width: 100%;
+}
+
+/* BOTÃO DE DOAÇÃO */
+
+.btn-doar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 10px 16px;
+    background-color: #A6192E;
+    color: white;
+
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+.btn-doar svg {
+    width: 16px;
+    height: 16px;
+}
+
+.btn-doar:hover {
+    background-color: #861426;
+    transform: translateY(-2px);
+}
+
+
+/* ==================================
+   RODAPÉ - RECANTO DO VOVÔ
+================================== */
+
+.rodape {
+    background-color: #123E68;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    padding: 55px 6% 25px;
+}
+
+/* CONTAINER PRINCIPAL */
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1.3fr 1.2fr 0.8fr;
+    gap: 50px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* COLUNA 1 - INSTITUIÇÃO */
+
+.footer-instituicao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo img {
+    width: 350px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.footer-identidade h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+    color: #ffffff;
+}
+
+.footer-identidade p {
+    font-size: 13px;
+    margin: 0;
+}
+
+.footer-instituicao > p {
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 320px;
+    margin: 0;
+}
+
+/* TÍTULOS DAS COLUNAS */
+
+.footer-navegacao h3,
+.footer-contato h3,
+.footer-redes h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 24px;
+    color: #ffffff;
+}
+
+/* COLUNA 2 - NAVEGAÇÃO */
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 35px;
+    row-gap: 14px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffb3c1;
+}
+
+/* COLUNA 3 - CONTATO */
+
+.footer-contato p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0 0 8px;
+    overflow-wrap: anywhere;
+}
+
+.footer-contato .footer-horario {
+    margin-top: 20px;
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+/* COLUNA 4 - REDES SOCIAIS */
+
+.footer-redes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-redes a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+.footer-redes a:hover {
+    color: #ffb3c1;
+}
+
+/* PARTE INFERIOR DO RODAPÉ */
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    max-width: 1600px;
+    margin: 40px auto 0;
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    margin: 0;
+}
+
+.footer-bottom-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-bottom-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-bottom-links a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* HERO SECTION */
+
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    min-height: 520px;
+    background-color: #FFF7EB;
+    overflow: hidden;
+}
+
+.hero-conteudo {
+    padding: 60px 7%;
+    max-width: 650px;
+}
+
+.hero-etiqueta {
+    color: #A6192E;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.hero h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: #123E68;
+    line-height: 1.1;
+    margin: 18px 0;
+}
+
+.hero p {
+    font-size: 16px;
+    color: #667085;
+    line-height: 1.8;
+    max-width: 430px;
+}
+
+.hero-botoes {
+    display: flex;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.hero-btn-doar,
+.hero-btn-conhecer {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.hero-btn-doar {
+    background-color: #A6192E;
+    color: white;
+}
+
+.hero-btn-doar:hover {
+    background-color: #861426;
+}
+
+.hero-btn-conhecer {
+    background-color: white;
+    color: #123E68;
+    border: 1px solid #D9DEE7;
+}
+
+.hero-btn-conhecer:hover {
+    background-color: #F5F7FA;
+}
+
+.hero-btn-doar svg {
+    width: 16px;
+    height: 16px;
+}
+
+.hero-imagem {
+    position: relative;
+    height: 100%;
+}
+
+.hero-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* degradê só na borda da foto */
+.hero-imagem::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        #FFF7EB 0%,
+        rgba(255, 247, 235, 0.92) 8%,
+        rgba(255, 247, 235, 0.45) 18%,
+        rgba(255, 247, 235, 0.05) 28%,
+        transparent 40%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+
