@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/nossos_idosos.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/svg+xml" href="img/image (4).svg">
-  <title>Recanto do Vovô</title>
+    <title>Recanto do Vovô</title>
 
 </head>
 
@@ -216,8 +216,8 @@
                     <figure class="galeria-item">
 
                         <div class="galeria-imagem">
-                            <img src="img/idoso3.jpg"
-                                alt="Pessoas idosas participando de uma atividade de jardinagem" loading="lazy">
+                            <img src="img/idoso3.jpg" alt="Pessoas idosas participando de uma atividade de jardinagem"
+                                loading="lazy">
                         </div>
 
                         <figcaption>
@@ -242,11 +242,28 @@
 
                 </div>
 
-               
+
             </div>
 
         </section>
 
+        <!-- LIGHTBOX DA GALERIA -->
+
+        <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Fotografia ampliada" hidden>
+
+            <button class="lightbox-fechar" id="lightbox-fechar" type="button" aria-label="Fechar fotografia">
+                <i data-lucide="x"></i>
+            </button>
+
+            <div class="lightbox-conteudo">
+
+                <img src="" alt="" id="lightbox-imagem">
+
+                <p id="lightbox-legenda"></p>
+
+            </div>
+
+        </div>
 
     </main>
 
@@ -339,6 +356,7 @@
     <script>
         lucide.createIcons();
     </script>
+    <script src="script/galeria.js" defer></script>
 </body>
 
 </html>
