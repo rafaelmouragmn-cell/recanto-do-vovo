@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/noticias.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="img/image (4).svg">
+    <title>Recanto do Vovô</title>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-bar">
+
+            <a href="index.html"><img src="img/logo2.svg" alt="Logo Recanto do Vovô" class="logo"></a>
+
+            <nav id="nav">
+                <a href="index.html">Início</a>
+                <a href="instituicao.html">A Instituição</a>
+                <a href="nossos_idosos.html">Nossos Idosos</a>
+                <a href="#como-ajudar" class="abrir-como-ajudar">
+                    Como Ajudar
+                </a>
+                <a href="sustentabilidade.html">Sustentabilidade</a>
+                <a href="noticias.html" aria-current="page" class="ativo">Notícias</a>
+                <a href="#">Contato</a>
+            </nav>
+
+            <a href="doacoes.html" class="btn-doar">
+                <i data-lucide="heart-handshake"></i>
+                Faça uma Doação
+            </a>
+
+        </div>
+    </header>
+    <main>
+
+        <!-- ==================================
+             BANNER - NOTÍCIAS
+        ================================== -->
+
+        <section class="noticias-banner">
+
+            <div class="noticias-banner-container">
+
+                <!-- CAMINHO DE NAVEGAÇÃO -->
+                <nav class="noticias-breadcrumb" aria-label="Navegação estrutural">
+
+                    <a href="index.html">Início</a>
+
+                    <span aria-hidden="true">/</span>
+
+                    <span aria-current="page">Notícias</span>
+
+                </nav>
+
+                <!-- TÍTULO -->
+                <h1>Notícias</h1>
+
+                <!-- DESCRIÇÃO -->
+                <p>
+                    Acompanhe as novidades, os eventos e
+                    as ações do Recanto do Vovô.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- PRÓXIMAS SEÇÕES DE NOTÍCIAS -->
+
+
+        <!-- ==========================================
+     FILTROS DE NOTÍCIAS
+========================================== -->
+
+        <section class="noticias-filtros">
+
+            <div class="filtros-container">
+
+                <form class="filtros-form" id="form-filtros">
+
+                    <!-- FILTRO POR CATEGORIA -->
+                    <div class="filtro-grupo">
+
+                        <label for="filtro-categoria">
+                            Categoria
+                        </label>
+
+                        <select id="filtro-categoria" name="categoria">
+
+                            <option value="">
+                                Todas as categorias
+                            </option>
+
+                            <option value="eventos">
+                                Eventos
+                            </option>
+
+                            <option value="atividades">
+                                Atividades
+                            </option>
+
+                            <option value="campanhas">
+                                Campanhas
+                            </option>
+
+                            <option value="comunicados">
+                                Comunicados
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- FILTRO POR PERÍODO -->
+                    <div class="filtro-grupo">
+
+                        <label for="filtro-periodo">
+                            Período
+                        </label>
+
+                        <select id="filtro-periodo" name="periodo">
+
+                            <option value="">
+                                Todas as datas
+                            </option>
+
+                            <option value="7">
+                                Últimos 7 dias
+                            </option>
+
+                            <option value="30">
+                                Últimos 30 dias
+                            </option>
+
+                            <option value="90">
+                                Últimos 3 meses
+                            </option>
+
+                            <option value="365">
+                                Último ano
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- BUSCA POR TÍTULO -->
+                    <div class="filtro-grupo filtro-busca">
+
+                        <label for="filtro-titulo">
+                            Busca por título
+                        </label>
+
+                        <input type="search" id="filtro-titulo" name="titulo" placeholder="Buscar por título...">
+
+                    </div>
+
+                    <!-- BOTÃO BUSCAR -->
+                    <button type="submit" class="filtro-btn">
+                        Buscar
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================================
+     ÚLTIMAS NOTÍCIAS DO RECANTO
+========================================== -->
+
+        <section class="ultimas-noticias">
+
+            <div class="ultimas-container">
+
+                <!-- CABEÇALHO DA SEÇÃO -->
+                <div class="ultimas-cabecalho">
+
+                    <h2>Últimas do Recanto</h2>
+
+                    <p class="noticias-contador">
+                        Exibindo <span id="quantidade-noticias">3</span> notícias
+                    </p>
+
+                </div>
+
+                <!-- GRID DE NOTÍCIAS -->
+                <div class="noticias-grid" id="lista-noticias">
+
+                    <!-- NOTÍCIA 1 -->
+                    <article class="noticia-card" data-categoria="eventos" data-data="2026-10-10"
+                        data-titulo="Semana do Idoso celebra respeito e valorização">
+
+                        <a href="noticia-semana-idoso.html" class="noticia-imagem">
+
+                            <img src="img/idoso1.webp"
+                                alt="Pessoas idosas participando de jogos e atividades de convivência" loading="lazy">
+
+                        </a>
+
+                        <div class="noticia-conteudo">
+
+                            <div class="noticia-meta">
+
+                                <span class="noticia-categoria">
+                                    Eventos
+                                </span>
+
+                                <time datetime="2026-10-10">
+                                    10 out. 2026
+                                </time>
+
+                            </div>
+
+                            <h3>
+                                <a href="noticia-semana-idoso.html">
+                                    Semana do Idoso celebra respeito e valorização
+                                </a>
+                            </h3>
+
+                            <p class="noticia-descricao">
+                                Programação especial com atividades de lazer,
+                                convivência e momentos de integração entre
+                                os residentes.
+                            </p>
+
+                            <a href="noticia-semana-idoso.html" class="noticia-ler-mais">
+
+                                Ler notícia
+                                <i data-lucide="arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <!-- NOTÍCIA 2 -->
+                    <article class="noticia-card" data-categoria="campanhas" data-data="2026-10-05"
+                        data-titulo="Campanha de Doação de Alimentos arrecada itens">
+
+                        <a href="noticia-doacao-alimentos.html" class="noticia-imagem">
+
+                            <img src="img/idososplantando.jpeg" alt="Voluntários organizando alimentos arrecadados"
+                                loading="lazy">
+
+                        </a>
+
+                        <div class="noticia-conteudo">
+
+                            <div class="noticia-meta">
+
+                                <span class="noticia-categoria">
+                                    Ações
+                                </span>
+
+                                <time datetime="2026-10-05">
+                                    05 out. 2026
+                                </time>
+
+                            </div>
+
+                            <h3>
+                                <a href="noticia-doacao-alimentos.html">
+                                    Campanha de Doação de Alimentos arrecada itens
+                                </a>
+                            </h3>
+
+                            <p class="noticia-descricao">
+                                Ação contou com o apoio da comunidade e
+                                reforçou a importância da solidariedade
+                                e da colaboração.
+                            </p>
+
+                            <a href="noticia-doacao-alimentos.html" class="noticia-ler-mais">
+
+                                Ler notícia
+                                <i data-lucide="arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <!-- NOTÍCIA 3 -->
+                    <article class="noticia-card" data-categoria="comunicados" data-data="2026-09-20"
+                        data-titulo="Nova parceria amplia atendimentos">
+
+                        <a href="noticia-parceria.html" class="noticia-imagem">
+
+                            <img src="img/idoso2.webp" alt="Cuidadora conversando com uma pessoa idosa" loading="lazy">
+
+                        </a>
+
+                        <div class="noticia-conteudo">
+
+                            <div class="noticia-meta">
+
+                                <span class="noticia-categoria">
+                                    Institucional
+                                </span>
+
+                                <time datetime="2026-09-20">
+                                    20 set. 2026
+                                </time>
+
+                            </div>
+
+                            <h3>
+                                <a href="noticia-parceria.html">
+                                    Nova parceria amplia atendimentos
+                                </a>
+                            </h3>
+
+                            <p class="noticia-descricao">
+                                Parceria vai contribuir para melhorias no
+                                atendimento e na qualidade de vida
+                                dos residentes.
+                            </p>
+
+                            <a href="noticia-parceria.html" class="noticia-ler-mais">
+
+                                Ler notícia
+                                <i data-lucide="arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- NOTÍCIA 4 -->
+                    <article class="noticia-card" data-categoria="atividades" data-data="2026-09-15"
+                        data-titulo="Tarde de música promove alegria e integração">
+
+                        <a href="#" class="noticia-imagem">
+                            <img src="img/noticia-musica.jpg" alt="Atividade musical com pessoas idosas" loading="lazy">
+                        </a>
+
+                        <div class="noticia-conteudo">
+                            <div class="noticia-meta">
+                                <span class="noticia-categoria">Atividades</span>
+                                <time datetime="2026-09-15">15 set. 2026</time>
+                            </div>
+
+                            <h3><a href="#">Tarde de música promove alegria e integração</a></h3>
+
+                            <p class="noticia-descricao">
+                                Encontro musical proporciona momentos de alegria,
+                                descontração e convivência entre os residentes.
+                            </p>
+
+                            <a href="#" class="noticia-ler-mais">
+                                Ler mais <i data-lucide="arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- NOTÍCIA 5 -->
+                    <article class="noticia-card" data-categoria="eventos" data-data="2026-09-08"
+                        data-titulo="Recanto realiza confraternização especial">
+
+                        <a href="#" class="noticia-imagem">
+                            <img src="img/noticia-confraternizacao.jpg" alt="Confraternização entre residentes"
+                                loading="lazy">
+                        </a>
+
+                        <div class="noticia-conteudo">
+                            <div class="noticia-meta">
+                                <span class="noticia-categoria">Eventos</span>
+                                <time datetime="2026-09-08">08 set. 2026</time>
+                            </div>
+
+                            <h3><a href="#">Recanto realiza confraternização especial</a></h3>
+
+                            <p class="noticia-descricao">
+                                Uma programação especial reúne os residentes
+                                em momentos de celebração e amizade.
+                            </p>
+
+                            <a href="#" class="noticia-ler-mais">
+                                Ler mais <i data-lucide="arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- NOTÍCIA 6 -->
+                    <article class="noticia-card" data-categoria="campanhas" data-data="2026-08-25"
+                        data-titulo="Campanha solidária mobiliza voluntários">
+
+                        <a href="#" class="noticia-imagem">
+                            <img src="img/noticia-voluntarios.jpg" alt="Voluntários participando de ação solidária"
+                                loading="lazy">
+                        </a>
+
+                        <div class="noticia-conteudo">
+                            <div class="noticia-meta">
+                                <span class="noticia-categoria">Campanhas</span>
+                                <time datetime="2026-08-25">25 ago. 2026</time>
+                            </div>
+
+                            <h3><a href="#">Campanha solidária mobiliza voluntários</a></h3>
+
+                            <p class="noticia-descricao">
+                                Ação busca incentivar a participação da
+                                comunidade nas atividades da instituição.
+                            </p>
+
+                            <a href="#" class="noticia-ler-mais">
+                                Ler mais <i data-lucide="arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- NOTÍCIA 7 -->
+                    <article class="noticia-card" data-categoria="atividades" data-data="2026-08-12"
+                        data-titulo="Oficina de artesanato estimula criatividade">
+
+                        <a href="#" class="noticia-imagem">
+                            <img src="img/noticia-artesanato.jpg" alt="Pessoas idosas realizando artesanato"
+                                loading="lazy">
+                        </a>
+
+                        <div class="noticia-conteudo">
+                            <div class="noticia-meta">
+                                <span class="noticia-categoria">Atividades</span>
+                                <time datetime="2026-08-12">12 ago. 2026</time>
+                            </div>
+
+                            <h3><a href="#">Oficina de artesanato estimula criatividade</a></h3>
+
+                            <p class="noticia-descricao">
+                                Atividade artística incentiva a criatividade,
+                                a coordenação e a integração dos participantes.
+                            </p>
+
+                            <a href="#" class="noticia-ler-mais">
+                                Ler mais <i data-lucide="arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- NOTÍCIA 8 -->
+                    <article class="noticia-card" data-categoria="comunicados" data-data="2026-07-30"
+                        data-titulo="Instituição destaca importância do voluntariado">
+
+                        <a href="#" class="noticia-imagem">
+                            <img src="img/noticia-voluntariado.jpg" alt="Voluntários em atividade comunitária"
+                                loading="lazy">
+                        </a>
+
+                        <div class="noticia-conteudo">
+                            <div class="noticia-meta">
+                                <span class="noticia-categoria">Institucional</span>
+                                <time datetime="2026-07-30">30 jul. 2026</time>
+                            </div>
+
+                            <h3><a href="#">Instituição destaca importância do voluntariado</a></h3>
+
+                            <p class="noticia-descricao">
+                                A participação de voluntários contribui
+                                para o acolhimento e a convivência.
+                            </p>
+
+                            <a href="#" class="noticia-ler-mais">
+                                Ler mais <i data-lucide="arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- NOTÍCIA 9 -->
+                    <article class="noticia-card" data-categoria="eventos" data-data="2026-07-18"
+                        data-titulo="Encontro de famílias fortalece vínculos">
+
+                        <a href="#" class="noticia-imagem">
+                            <img src="img/noticia-familias.jpg" alt="Famílias reunidas com pessoas idosas"
+                                loading="lazy">
+                        </a>
+
+                        <div class="noticia-conteudo">
+                            <div class="noticia-meta">
+                                <span class="noticia-categoria">Eventos</span>
+                                <time datetime="2026-07-18">18 jul. 2026</time>
+                            </div>
+
+                            <h3><a href="#">Encontro de famílias fortalece vínculos</a></h3>
+
+                            <p class="noticia-descricao">
+                                Reunião entre residentes e familiares
+                                proporciona momentos de carinho e convivência.
+                            </p>
+
+                            <a href="#" class="noticia-ler-mais">
+                                Ler mais <i data-lucide="arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- NOTÍCIA 10 -->
+                    <article class="noticia-card" data-categoria="atividades" data-data="2026-06-25"
+                        data-titulo="Atividades de jardinagem incentivam bem-estar">
+
+                        <a href="#" class="noticia-imagem">
+                            <img src="img/idososplantando.jpeg" alt="Pessoas idosas participando de jardinagem"
+                                loading="lazy">
+                        </a>
+
+                        <div class="noticia-conteudo">
+                            <div class="noticia-meta">
+                                <span class="noticia-categoria">Atividades</span>
+                                <time datetime="2026-06-25">25 jun. 2026</time>
+                            </div>
+
+                            <h3><a href="#">Atividades de jardinagem incentivam bem-estar</a></h3>
+
+                            <p class="noticia-descricao">
+                                O contato com a natureza proporciona
+                                momentos de tranquilidade e integração.
+                            </p>
+
+                            <a href="#" class="noticia-ler-mais">
+                                Ler mais <i data-lucide="arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- NOTÍCIA 11 -->
+                    <article class="noticia-card" data-categoria="campanhas" data-data="2026-06-10"
+                        data-titulo="Arrecadação de materiais apoia atividades">
+
+                        <a href="#" class="noticia-imagem">
+                            <img src="img/noticia-arrecadacao.jpg" alt="Materiais organizados para uma campanha"
+                                loading="lazy">
+                        </a>
+
+                        <div class="noticia-conteudo">
+                            <div class="noticia-meta">
+                                <span class="noticia-categoria">Campanhas</span>
+                                <time datetime="2026-06-10">10 jun. 2026</time>
+                            </div>
+
+                            <h3><a href="#">Arrecadação de materiais apoia atividades</a></h3>
+
+                            <p class="noticia-descricao">
+                                A iniciativa incentiva doações de materiais
+                                utilizados nas atividades dos residentes.
+                            </p>
+
+                            <a href="#" class="noticia-ler-mais">
+                                Ler mais <i data-lucide="arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- NOTÍCIA 12 -->
+                    <article class="noticia-card" data-categoria="comunicados" data-data="2026-05-20"
+                        data-titulo="Recanto reforça compromisso com acolhimento">
+
+                        <a href="#" class="noticia-imagem">
+                            <img src="img/noticia-acolhimento.jpg" alt="Cuidadora acompanhando pessoa idosa"
+                                loading="lazy">
+                        </a>
+
+                        <div class="noticia-conteudo">
+                            <div class="noticia-meta">
+                                <span class="noticia-categoria">Institucional</span>
+                                <time datetime="2026-05-20">20 mai. 2026</time>
+                            </div>
+
+                            <h3><a href="#">Recanto reforça compromisso com acolhimento</a></h3>
+
+                            <p class="noticia-descricao">
+                                O respeito, a atenção e o cuidado humanizado
+                                fazem parte da proposta da instituição.
+                            </p>
+
+                            <a href="#" class="noticia-ler-mais">
+                                Ler mais <i data-lucide="arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+
+
+
+                </div>
+
+                <!-- MENSAGEM PARA FUTURO FILTRO -->
+                <p class="noticias-vazio" id="noticias-vazio" hidden>
+                    Nenhuma notícia encontrada para os filtros selecionados.
+                </p>
+
+            </div>
+
+            <!-- ==================================
+     PAGINAÇÃO DAS NOTÍCIAS
+================================== -->
+
+            <nav class="noticias-paginacao" aria-label="Paginação das notícias">
+
+                <!-- VOLTAR -->
+                <button type="button" class="paginacao-btn" id="pagina-anterior" aria-label="Página anterior" disabled>
+
+                    <i data-lucide="arrow-left"></i>
+
+                </button>
+
+                <!-- PÁGINA ATUAL -->
+                <button type="button" class="paginacao-btn ativo" id="pagina-atual" aria-label="Página 1"
+                    aria-current="page">
+
+                    1
+
+                </button>
+
+                <!-- AVANÇAR -->
+                <button type="button" class="paginacao-btn" id="proxima-pagina" aria-label="Próxima página" disabled>
+
+                    <i data-lucide="arrow-right"></i>
+
+                </button>
+
+            </nav>
+
+        </section>
+
+
+
+    </main>
+
+
+<script src="script/noticias.js" defer></script>
+
+</body>
