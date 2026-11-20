@@ -867,111 +867,214 @@ body {
     }
 }
 
-/* CONTEÚDO E RODAPÉ RESPONSIVOS */
 
-@media (max-width: 1100px) {
-    .footer-container,
-    .valores-container {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 28px;
-    }
+/* ==========================================
+   MODAL GLOBAL - COMO AJUDAR
+========================================== */
 
-    .footer-navegacao h3,
-    .footer-contato h3,
-    .footer-redes h3 {
-        padding-top: 0;
-        margin-bottom: 16px;
-    }
+.modal-ajudar {
+    position: fixed;
+    inset: 0;
 
-    .informacoes-container {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 24px;
-    }
+    width: calc(100% - 32px);
+    max-width: 650px;
+    max-height: calc(100dvh - 32px);
+
+    margin: auto;
+    padding: 35px 32px;
+
+    background-color: #ffffff;
+
+    border: none;
+    border-radius: 18px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.20);
+
+    overflow-y: auto;
+
+    font-family: 'Poppins', sans-serif;
 }
 
-@media (max-width: 768px) {
-    .hero,
-    .sustentabilidade-container {
-        grid-template-columns: minmax(0, 1fr);
-        min-height: 0;
-    }
+/* FUNDO ESCURECIDO */
 
-    .hero-conteudo {
-        max-width: none;
-        padding: 36px 6%;
-    }
-
-    .hero-imagem,
-    .sustentabilidade-imagem {
-        height: auto;
-        min-height: 0;
-        aspect-ratio: 16 / 9;
-    }
-
-    .hero-imagem::before {
-        display: none;
-    }
-
-    .sustentabilidade-conteudo {
-        padding: 24px;
-    }
-
-    .footer-bottom {
-        flex-wrap: wrap;
-    }
+.modal-ajudar::backdrop {
+    background-color: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
 }
+
+/* BOTÃO FECHAR */
+
+.modal-ajudar-fechar {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    border: 1px solid #D7DEE7;
+    border-radius: 10px;
+
+    background-color: #ffffff;
+    color: #123E68;
+
+    cursor: pointer;
+}
+
+.modal-ajudar-fechar:hover {
+    background-color: #FFF4E5;
+}
+
+.modal-ajudar-fechar svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* TÍTULO */
+
+.modal-ajudar h2 {
+    color: #123E68;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.3;
+
+    padding-right: 28px;
+    margin-bottom: 20px;
+}
+
+/* DESCRIÇÃO */
+
+.modal-ajudar-descricao {
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* CONTAINER DOS CARDS */
+
+.modal-ajudar-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* CARDS */
+
+.modal-ajudar-card {
+    display: block;
+    padding: 18px 20px;
+
+    background-color: #FFF4E5;
+    border-radius: 13px;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.modal-ajudar-card:hover {
+    background-color: #FCE8EC;
+    transform: translateY(-3px);
+}
+
+/* TÍTULO DOS CARDS */
+
+.modal-ajudar-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #A6192E;
+    font-size: 19px;
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+.modal-ajudar-card h3 svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+
+    transition: transform 0.3s ease;
+}
+
+.modal-ajudar-card:hover h3 svg {
+    transform: translateX(5px);
+}
+
+/* TEXTO DOS CARDS */
+
+.modal-ajudar-card p {
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* AVISO INFERIOR */
+
+.modal-ajudar-aviso {
+    margin-top: 22px;
+
+    color: #667085;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
 
 @media (max-width: 600px) {
-    .valores {
-        padding-block: 28px;
+
+    .modal-ajudar {
+        width: calc(100% - 24px);
+        max-height: calc(100dvh - 24px);
+        padding: 45px 20px 25px;
+        border-radius: 14px;
     }
 
-    .footer-container,
-    .valores-container {
-        grid-template-columns: minmax(0, 1fr);
+    .modal-ajudar h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
     }
 
-    .valores-container {
-        gap: 18px;
+    .modal-ajudar-descricao {
+        font-size: 14px;
     }
 
-    .valor-card {
-        min-height: 0;
-        padding: 22px;
+    .modal-ajudar-opcoes {
+        gap: 14px;
     }
 
-    .sobre-recanto {
-        flex-direction: column;
-        gap: 16px;
+    .modal-ajudar-card {
+        padding: 16px;
     }
 
-    .sobre-imagem {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 9;
+    .modal-ajudar-card h3 {
+        font-size: 17px;
     }
 
-    .rodape {
-        padding-block: 32px 22px;
-    }
-
-    .footer-container {
-        gap: 28px;
-    }
-
-    .footer-bottom {
-        margin-top: 28px;
-    }
-
-    .footer-bottom-links {
-        flex-wrap: wrap;
-        gap: 8px;
+    .modal-ajudar-card p {
+        font-size: 13px;
     }
 }
 
-@media (max-width: 380px) {
-    .hero-botoes {
-        flex-direction: column;
-        align-items: stretch;
+@media (prefers-reduced-motion: reduce) {
+    .modal-ajudar-card,
+    .modal-ajudar-card h3 svg {
+        transition: none;
+    }
+
+    .modal-ajudar-card:hover,
+    .modal-ajudar-card:hover h3 svg {
+        transform: none;
     }
 }

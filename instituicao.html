@@ -13,7 +13,7 @@
     <link rel="icon" type="image/svg+xml" href="img/image (4).svg">
     <link rel="stylesheet" href="css/style.css">
 
-   <title>Recanto do Vovô</title>
+    <title>Recanto do Vovô</title>
 
 </head>
 
@@ -28,7 +28,9 @@
                 <a href="index.html">Início</a>
                 <a href="instituicao.html" aria-current="page" class="ativo">A Instituição</a>
                 <a href="nossos_idosos.html">Nossos Idosos</a>
-                <a href="#">Como Ajudar</a>
+                <a href="#como-ajudar" class="abrir-como-ajudar">
+                    Como Ajudar
+                </a>
                 <a href="#">Sustentabilidade</a>
                 <a href="#">Notícias</a>
                 <a href="#">Contato</a>
@@ -356,13 +358,79 @@
         </div>
 
     </footer>
+     <!-- ==================================
+     MODAL - COMO AJUDAR
+================================== -->
+
+  <dialog class="modal-ajudar" id="modal-ajudar" aria-labelledby="modal-ajudar-titulo">
+
+    <button class="modal-ajudar-fechar" type="button" aria-label="Fechar janela">
+      <i data-lucide="x"></i>
+    </button>
+
+    <div class="modal-ajudar-conteudo">
+
+      <h2 id="modal-ajudar-titulo">
+        Sua ajuda transforma vidas.
+      </h2>
+
+      <p class="modal-ajudar-descricao">
+        Escolha uma forma de contribuir com o cuidado
+        e o bem-estar dos nossos idosos.
+      </p>
+
+      <div class="modal-ajudar-opcoes">
+
+        <a href="doacoes.html" class="modal-ajudar-card">
+          <h3>
+            Doação financeira
+            <i data-lucide="arrow-right"></i>
+          </h3>
+          <p>
+            Fale com a equipe para conhecer
+            os meios de doação.
+          </p>
+        </a>
+
+        <a href="doacoes.html" class="modal-ajudar-card">
+          <h3>
+            Doação de materiais
+            <i data-lucide="arrow-right"></i>
+          </h3>
+          <p>
+            Combine a entrega e consulte
+            os itens necessários.
+          </p>
+        </a>
+
+        <a href="doacoes.html" class="modal-ajudar-card">
+          <h3>
+            Voluntariado e parcerias
+            <i data-lucide="arrow-right"></i>
+          </h3>
+          <p>
+            Compartilhe seu tempo, talento
+            ou apoio institucional.
+          </p>
+        </a>
+
+      </div>
+
+      <p class="modal-ajudar-aviso">
+        Os dados e as orientações de doação
+        serão confirmados pela instituição.
+      </p>
+
+    </div>
+
+  </dialog>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js">
     </script>
     <script>
         lucide.createIcons();
     </script>
-
+    <script src="script/modal-ajudar.js" defer></script>
 </body>
 
 </html>
