@@ -132,44 +132,607 @@
     }
 }
 
+
+/* ==========================================
+   SEÇÃO NOSSAS INICIATIVAS
+========================================== */
+
+/* SEÇÃO PRINCIPAL */
+
+.iniciativas {
+    width: 100%;
+    padding: 45px 4% 65px;
+
+    background-color: #ffffff;
+}
+
+/* CONTAINER */
+
+.iniciativas-container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* TÍTULO */
+
+.iniciativas-container h2 {
+    color: #17452D;
+
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.3;
+
+    margin-bottom: 38px;
+}
+
+/* ==========================================
+   GRID DOS CARDS
+========================================== */
+
+.iniciativas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+/* ==========================================
+   CARDS
+========================================== */
+
+.iniciativa-card {
+    position: relative;
+    overflow: hidden;
+
+    background-color: #E5F2E8;
+    border: 1px solid transparent;
+    border-radius: 16px;
+
+    padding: 24px;
+    min-height: 250px;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+/* ANIMAÇÃO DO CARD */
+
+.iniciativa-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #8CBF9A;
+
+    box-shadow: 0 14px 30px rgba(23, 69, 45, 0.12);
+}
+
+/* LINHA VERDE ANIMADA */
+
+.iniciativa-card::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 4px;
+
+    background-color: #17452D;
+
+    transition: width 0.35s ease;
+}
+
+.iniciativa-card:hover::after {
+    width: 100%;
+}
+
+/* ==========================================
+   ÍCONES
+========================================== */
+
+.iniciativa-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    background-color: #ffffff;
+    border-radius: 14px;
+
+    margin-bottom: 18px;
+
+    transition:
+        transform 0.35s ease,
+        background-color 0.35s ease;
+}
+
+/* ÍCONES LUCIDE */
+
+.iniciativa-icone svg {
+    width: 28px;
+    height: 28px;
+
+    color: #17452D;
+    stroke-width: 1.8;
+
+    transition: transform 0.35s ease;
+}
+
+/* ANIMAÇÃO DOS ÍCONES */
+
+.iniciativa-card:hover .iniciativa-icone {
+    background-color: #D1E8D7;
+    transform: rotate(-5deg);
+}
+
+.iniciativa-card:hover .iniciativa-icone svg {
+    transform: scale(1.12) rotate(5deg);
+}
+
+/* ==========================================
+   TÍTULOS E DESCRIÇÕES
+========================================== */
+
+.iniciativa-card h3 {
+    color: #17452D;
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    margin-bottom: 18px;
+}
+
+.iniciativa-card p {
+    color: #667085;
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+/* ==========================================
+   RESPONSIVIDADE - TABLETS
+========================================== */
+
+@media (max-width: 1100px) {
+
+    .iniciativas {
+        padding: 40px 5% 55px;
+    }
+
+    .iniciativas-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .iniciativa-card {
+        min-height: 220px;
+    }
+}
+
 /* ==========================================
    RESPONSIVIDADE - CELULARES
 ========================================== */
 
 @media (max-width: 600px) {
 
-    .sustentabilidade-banner {
-        min-height: 360px;
-        padding: 30px 20px 45px;
-
-        background-position: 65% center;
-
-        background-image:
-            linear-gradient(
-                90deg,
-                rgba(15, 61, 37, 0.94),
-                rgba(15, 61, 37, 0.76)
-            ),
-            url("../img/idososplantando.jpeg");
+    .iniciativas {
+        padding: 35px 20px 45px;
     }
 
-    .sustentabilidade-breadcrumb {
-        gap: 8px;
-        margin-bottom: 28px;
+    .iniciativas-container h2 {
+        font-size: 25px;
+        margin-bottom: 24px;
     }
 
-    .sustentabilidade-breadcrumb a,
-    .sustentabilidade-breadcrumb span {
-        font-size: 12px;
+    .iniciativas-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 
-    .sustentabilidade-banner h1 {
-        font-size: clamp(29px, 8vw, 36px);
-        margin-bottom: 22px;
+    .iniciativa-card {
+        min-height: auto;
+        padding: 22px;
     }
 
-    .sustentabilidade-banner p {
+    .iniciativa-icone {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 16px;
+    }
+
+    .iniciativa-icone svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .iniciativa-card h3 {
+        font-size: 19px;
+        margin-bottom: 12px;
+    }
+
+    .iniciativa-card p {
         font-size: 14px;
-        line-height: 1.8;
+    }
+}
+
+
+/* ==========================================
+   SEÇÃO NOSSO IMPACTO
+========================================== */
+
+/* SEÇÃO PRINCIPAL */
+
+.impacto {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 30px 4% 60px;
+}
+
+/* CONTAINER PRINCIPAL */
+
+.impacto-container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* ORGANIZAÇÃO DAS DUAS COLUNAS */
+
+.impacto-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 40px;
+}
+
+/* ==========================================
+   COLUNA ESQUERDA - RESULTADOS
+========================================== */
+
+.impacto-resultados {
+    min-width: 0;
+}
+
+/* TÍTULO */
+
+.impacto-resultados h2 {
+    color: #17452D;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.3;
+
+    margin-bottom: 16px;
+}
+
+/* DESCRIÇÃO */
+
+.impacto-descricao {
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.8;
+
+    margin-bottom: 16px;
+}
+
+/* ==========================================
+   CARDS DE IMPACTO
+========================================== */
+
+.impacto-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+/* CARD INDIVIDUAL */
+
+.impacto-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-width: 0;
+    min-height: 210px;
+
+    padding: 24px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #D7DEE7;
+    border-radius: 16px;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+/* EFEITO HOVER */
+
+.impacto-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #8CBF9A;
+
+    box-shadow: 0 12px 28px rgba(23, 69, 45, 0.10);
+}
+
+/* ÍCONE LUCIDE */
+
+.impacto-card > svg {
+    width: 32px;
+    height: 32px;
+
+    color: #17452D;
+    stroke-width: 1.8;
+
+    margin-bottom: 24px;
+
+    transition: transform 0.35s ease;
+}
+
+.impacto-card:hover > svg {
+    transform: scale(1.12);
+}
+
+/* NÚMEROS */
+
+.impacto-card h3 {
+    color: #17452D;
+    font-size: clamp(28px, 3.3vw, 46px);
+    font-weight: 700;
+    line-height: 1.2;
+
+    margin-bottom: 16px;
+    white-space: nowrap;
+}
+
+/* DESCRIÇÃO DOS INDICADORES */
+
+.impacto-card p {
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   COLUNA DIREITA - COMO CONTRIBUIR
+========================================== */
+
+.impacto-contribuir {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-width: 0;
+    min-height: 285px;
+
+    padding: 28px;
+
+    background-color: #FFF4E5;
+    border-radius: 16px;
+}
+
+/* ÍCONE */
+
+.contribuir-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    background-color: #ffffff;
+    border-radius: 14px;
+
+    margin-bottom: 18px;
+}
+
+.contribuir-icone svg {
+    width: 27px;
+    height: 27px;
+
+    color: #17452D;
+    stroke-width: 1.8;
+}
+
+/* TÍTULO */
+
+.impacto-contribuir h2 {
+    color: #17452D;
+    font-size: 25px;
+    font-weight: 600;
+
+    margin-bottom: 16px;
+}
+
+/* DESCRIÇÃO */
+
+.impacto-contribuir p {
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+/* ==========================================
+   BOTÃO VEJA COMO PARTICIPAR
+========================================== */
+
+.contribuir-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 14px 20px;
+
+    background-color: #17452D;
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* HOVER DO BOTÃO */
+
+.contribuir-btn:hover {
+    background-color: #23613F;
+    transform: translateY(-2px);
+}
+
+/* ÍCONE DO BOTÃO */
+
+.contribuir-btn svg {
+    width: 16px;
+    height: 16px;
+
+    transition: transform 0.3s ease;
+}
+
+.contribuir-btn:hover svg {
+    transform: translateX(5px);
+}
+
+/* ==========================================
+   FRASE FINAL
+========================================== */
+
+.impacto-frase {
+    color: #17452D;
+
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    margin-top: 40px;
+}
+
+/* ==========================================
+   RESPONSIVIDADE - TABLETS
+========================================== */
+
+@media (max-width: 1100px) {
+
+    .impacto {
+        padding: 30px 5% 50px;
+    }
+
+    .impacto-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .impacto-cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .impacto-card h3 {
+        font-size: 38px;
+    }
+
+    .impacto-contribuir {
+        min-height: auto;
+    }
+}
+
+/* ==========================================
+   RESPONSIVIDADE - CELULARES
+========================================== */
+
+@media (max-width: 600px) {
+
+    .impacto {
+        padding: 25px 20px 45px;
+    }
+
+    .impacto-resultados h2 {
+        font-size: 25px;
+    }
+
+    .impacto-descricao {
+        font-size: 14px;
+    }
+
+    .impacto-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .impacto-card {
+        min-height: auto;
+        padding: 22px;
+    }
+
+    .impacto-card > svg {
+        margin-bottom: 15px;
+    }
+
+    .impacto-card h3 {
+        font-size: 38px;
+        margin-bottom: 10px;
+    }
+
+    .impacto-card p {
+        font-size: 14px;
+    }
+
+    .impacto-contribuir {
+        padding: 24px;
+    }
+
+    .impacto-contribuir h2 {
+        font-size: 23px;
+    }
+
+    .impacto-contribuir p {
+        font-size: 14px;
+    }
+
+    .contribuir-btn {
+        font-size: 13px;
+        padding: 13px 16px;
+    }
+
+    .impacto-frase {
+        font-size: 21px;
+        margin-top: 30px;
+    }
+}
+
+/* ==========================================
+   ACESSIBILIDADE
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .impacto-card,
+    .impacto-card > svg,
+    .contribuir-btn,
+    .contribuir-btn svg {
+        transition: none;
+    }
+
+    .impacto-card:hover,
+    .impacto-card:hover > svg,
+    .contribuir-btn:hover,
+    .contribuir-btn:hover svg {
+        transform: none;
     }
 }
