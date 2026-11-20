@@ -92,7 +92,7 @@
 
 .historia-container {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
     align-items: center;
 
     gap: 40px;
@@ -123,7 +123,6 @@
 
 .historia-conteudo {
     min-width: 0;
-    padding-right: 40px;
 }
 
 .historia-conteudo h2 {
@@ -182,6 +181,40 @@
     height: 16px;
 }
 
+
+
+
+@media (max-width: 768px) {
+    .historia-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .historia-imagem {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+@media (max-width: 600px) {
+    .instituicao-banner,
+    .historia {
+        padding-block: 28px;
+    }
+
+    .breadcrumb {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .instituicao-banner h1 {
+        font-size: 32px;
+    }
+
+    .historia-conteudo h2 {
+        font-size: 26px;
+    }
+}
 
 
 /* ==========================================

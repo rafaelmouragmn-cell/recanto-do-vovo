@@ -144,7 +144,7 @@ body {
 
 .footer-container {
     display: grid;
-    grid-template-columns: 1.5fr 1.3fr 1.2fr 0.8fr;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.3fr) minmax(0, 1.2fr) minmax(0, 0.8fr);
     gap: 50px;
     max-width: 1600px;
     margin: 0 auto;
@@ -163,10 +163,12 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
+    max-width: 100%;
 }
 
 .footer-logo img {
     width: 350px;
+    max-width: 100%;
     height: auto;
     border-radius: 4px;
 }
@@ -207,12 +209,13 @@ body {
 
 .footer-links {
     display: grid;
-    grid-template-columns: repeat(2, max-content);
-    column-gap: 35px;
+    grid-template-columns: repeat(2, minmax(0, max-content));
+    column-gap: clamp(12px, 2vw, 35px);
     row-gap: 14px;
 }
 
 .footer-links a {
+    overflow-wrap: anywhere;
     color: #ffffff;
     text-decoration: none;
     font-size: 14px;
@@ -301,7 +304,7 @@ body {
 
 .hero {
     display: grid;
-    grid-template-columns: 1.1fr 1fr;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
     align-items: center;
     min-height: 520px;
     background-color: #FFF7EB;
@@ -321,7 +324,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 56px;
+    font-size: clamp(32px, 4.5vw, 56px);
     font-weight: 700;
     color: #123E68;
     line-height: 1.1;
@@ -337,6 +340,7 @@ body {
 
 .hero-botoes {
     display: flex;
+    flex-wrap: wrap;
     gap: 14px;
     margin-top: 28px;
 }
@@ -651,7 +655,7 @@ body {
 /* FOTOGRAFIA */
 
 .sobre-imagem {
-    width: 280px;
+    width: min(38%, 280px);
     height: 200px;
     flex-shrink: 0;
 
@@ -785,4 +789,189 @@ body {
 
 .noticias-link:hover svg {
     transform: translateX(5px);
+}
+
+/* =====================================
+   NAVBAR RESPONSIVA
+===================================== */
+
+@media (max-width: 1240px) {
+
+    .nav-bar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        padding: 15px 5%;
+        gap: 15px;
+    }
+
+    .logo {
+        width: 170px;
+        height: auto;
+    }
+
+    #nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        order: 3;
+        flex: 0 0 100%;
+        gap: 12px 18px;
+    }
+
+    #nav a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 36px;
+        padding: 6px 0;
+        font-size: 13px;
+    }
+
+    .btn-doar {
+        order: 2;
+        margin-left: auto;
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 480px) {
+
+    .nav-bar {
+        padding: 12px 4%;
+        gap: 12px;
+    }
+
+    .logo {
+        width: 140px;
+    }
+
+    #nav {
+        gap: 4px 14px;
+    }
+
+    #nav a {
+        font-size: 12px;
+    }
+
+    .btn-doar {
+        min-height: 44px;
+        padding: 9px 10px;
+        font-size: 12px;
+    }
+}
+
+/* CONTEÚDO E RODAPÉ RESPONSIVOS */
+
+@media (max-width: 1100px) {
+    .footer-container,
+    .valores-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+    }
+
+    .footer-navegacao h3,
+    .footer-contato h3,
+    .footer-redes h3 {
+        padding-top: 0;
+        margin-bottom: 16px;
+    }
+
+    .informacoes-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero,
+    .sustentabilidade-container {
+        grid-template-columns: minmax(0, 1fr);
+        min-height: 0;
+    }
+
+    .hero-conteudo {
+        max-width: none;
+        padding: 36px 6%;
+    }
+
+    .hero-imagem,
+    .sustentabilidade-imagem {
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 16 / 9;
+    }
+
+    .hero-imagem::before {
+        display: none;
+    }
+
+    .sustentabilidade-conteudo {
+        padding: 24px;
+    }
+
+    .footer-bottom {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .valores {
+        padding-block: 28px;
+    }
+
+    .footer-container,
+    .valores-container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .valores-container {
+        gap: 18px;
+    }
+
+    .valor-card {
+        min-height: 0;
+        padding: 22px;
+    }
+
+    .sobre-recanto {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .sobre-imagem {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .rodape {
+        padding-block: 32px 22px;
+    }
+
+    .footer-container {
+        gap: 28px;
+    }
+
+    .footer-bottom {
+        margin-top: 28px;
+    }
+
+    .footer-bottom-links {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero-botoes {
+        flex-direction: column;
+        align-items: stretch;
+    }
 }

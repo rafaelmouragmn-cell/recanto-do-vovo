@@ -426,49 +426,361 @@
     color: #123E68;
 }
 
-/* ==================================
-   RESPONSIVIDADE
-================================== */
 
-/* TABLETS */
+/* ==========================================
+   RESPONSIVIDADE - NOSSOS IDOSOS
+========================================== */
 
-@media (max-width: 1000px) {
+/* AJUSTES GERAIS */
+
+.rotina-container,
+.instituicao-container,
+.idosos-destaques-container,
+.galeria-container {
+    width: 100%;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==========================================
+   DESKTOP - ATÉ 1400px
+========================================== */
+
+@media (max-width: 1400px) {
+
+    /* ROTINA E ATIVIDADES */
+
+    .rotina-container {
+        grid-template-columns: 2fr 3fr;
+        gap: 30px;
+    }
+
+    .rotina-imagem {
+        height: 280px;
+    }
+
+    .rotina-conteudo h2 {
+        font-size: 28px;
+    }
+
+    /* CARDS */
+
+    .idosos-destaques-container {
+        gap: 20px;
+    }
+
+    .idoso-card {
+        padding: 22px;
+    }
+
+    .idoso-card h3 {
+        font-size: 18px;
+    }
+
+    /* GALERIA */
+
+    .galeria-grid {
+        gap: 20px;
+    }
+}
+
+/* ==========================================
+   TABLETS - ATÉ 1024px
+========================================== */
+
+@media (max-width: 1024px) {
+
+    /* BANNER */
+
+    .instituicao-banner {
+        padding: 35px 5%;
+    }
+
+    .instituicao-banner h1 {
+        font-size: 38px;
+    }
+
+    /* ROTINA E ATIVIDADES */
+
+    .rotina {
+        padding: 35px 5%;
+    }
+
+    .rotina-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .rotina-imagem {
+        height: 270px;
+    }
+
+    .rotina-conteudo h2 {
+        font-size: 26px;
+    }
+
+    .rotina-conteudo p {
+        font-size: 15px;
+    }
+
+    /* CARDS */
+
+    .idosos-destaques {
+        padding: 20px 5% 45px;
+    }
+
+    .idosos-destaques-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .idoso-card {
+        min-height: 210px;
+    }
+
+    /* GALERIA */
+
+    .galeria-momentos {
+        padding: 30px 5% 50px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+/* ==========================================
+   TABLETS PEQUENOS - ATÉ 768px
+========================================== */
+
+@media (max-width: 768px) {
+
+    /* BANNER */
+
+    .instituicao-banner {
+        padding: 30px 5%;
+    }
+
+    .instituicao-banner h1 {
+        font-size: 34px;
+    }
+
+    .instituicao-banner p {
+        font-size: 15px;
+    }
+
+    /* ROTINA E ATIVIDADES */
+
+    .rotina-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .rotina-imagem {
+        width: 100%;
+        height: 320px;
+    }
+
+    .rotina-conteudo h2 {
+        font-size: 28px;
+    }
+
+    .rotina-conteudo p {
+        max-width: 100%;
+    }
+
+    /* CARDS */
+
+    .idosos-destaques-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* GALERIA */
+
+    .galeria-cabecalho h2 {
+        font-size: 27px;
+    }
 
     .galeria-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-
 }
 
-/* CELULARES */
+/* ==========================================
+   CELULARES - ATÉ 600px
+========================================== */
 
 @media (max-width: 600px) {
 
+    /* BANNER */
+
+    .instituicao-banner {
+        padding: 30px 20px;
+    }
+
+    .breadcrumb {
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+
+    .instituicao-banner h1 {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+
+    .instituicao-banner p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    /* ROTINA E ATIVIDADES */
+
+    .rotina {
+        padding: 30px 20px;
+    }
+
+    .rotina-container {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .rotina-imagem {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 2;
+        border-radius: 14px;
+    }
+
+    .rotina-conteudo h2 {
+        font-size: 25px;
+        margin-bottom: 12px;
+    }
+
+    .rotina-conteudo p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    /* CARDS */
+
+    .idosos-destaques {
+        padding: 15px 20px 40px;
+    }
+
+    .idosos-destaques-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .idoso-card {
+        min-height: auto;
+        padding: 22px;
+    }
+
+    .idoso-icone {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 15px;
+    }
+
+    .idoso-icone svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .idoso-card h3 {
+        font-size: 19px;
+        margin-bottom: 10px;
+    }
+
+    .idoso-card p {
+        font-size: 14px;
+    }
+
+    /* GALERIA */
+
     .galeria-momentos {
-        padding: 30px 5% 45px;
+        padding: 25px 20px 45px;
     }
 
     .galeria-cabecalho {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+        margin-bottom: 20px;
     }
 
     .galeria-cabecalho h2 {
         font-size: 25px;
     }
 
+    .galeria-link {
+        font-size: 13px;
+    }
+
     .galeria-grid {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 24px;
     }
 
     .galeria-imagem {
         aspect-ratio: 3 / 2;
+        border-radius: 14px;
     }
 
     .galeria-item figcaption {
         font-size: 14px;
+        margin-top: 10px;
     }
 }
 
+/* ==========================================
+   CELULARES MUITO PEQUENOS - ATÉ 380px
+========================================== */
+
+@media (max-width: 380px) {
+
+    .instituicao-banner h1 {
+        font-size: 27px;
+    }
+
+    .rotina-conteudo h2,
+    .galeria-cabecalho h2 {
+        font-size: 23px;
+    }
+
+    .idoso-card {
+        padding: 18px;
+    }
+}
+
+/* ==========================================
+   ACESSIBILIDADE - REDUZIR ANIMAÇÕES
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .idoso-card,
+    .idoso-card::after,
+    .idoso-icone,
+    .idoso-icone svg,
+    .idoso-card h3,
+    .galeria-imagem img,
+    .galeria-item figcaption,
+    .galeria-link,
+    .galeria-link svg {
+        transition: none;
+    }
+
+    .idoso-card:hover,
+    .idoso-card:hover .idoso-icone,
+    .idoso-card:hover .idoso-icone svg,
+    .galeria-item:hover .galeria-imagem img,
+    .galeria-link:hover svg {
+        transform: none;
+    }
+}
