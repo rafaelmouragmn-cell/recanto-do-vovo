@@ -19,7 +19,7 @@ body {
 
     width: 100%;
     min-height: 70px;
-    padding: 5px 4%;
+    padding: 1px 3%;
     gap: 25px;
 
     background-color: #ffffff;
@@ -28,7 +28,7 @@ body {
 /* LOGO */
 
 .logo {
-    width: 220px;
+    width: 195px;
     height: auto;
     object-fit: contain;
     display: block;
@@ -309,7 +309,7 @@ body {
 }
 
 .hero-conteudo {
-    padding: 60px 7%;
+    padding: 40px 7% 60px;
     max-width: 650px;
 }
 

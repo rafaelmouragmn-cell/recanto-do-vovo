@@ -181,3 +181,471 @@
     width: 16px;
     height: 16px;
 }
+
+
+
+/* ==========================================
+   MISSÃO, VISÃO E VALORES
+========================================== */
+
+/* SEÇÃO PRINCIPAL */
+
+.missao-visao-valores {
+    padding: 20px 6% 60px;
+    background-color: #ffffff;
+}
+
+/* CONTAINER DOS CARDS */
+
+.mvv-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* ESTILO PRINCIPAL DOS CARDS */
+
+.mvv-card {
+    position: relative;
+    overflow: hidden;
+
+    background-color: #ffffff;
+    border: 1px solid #D7DEE7;
+    border-radius: 16px;
+
+    padding: 28px 24px;
+    min-height: 230px;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.mvv-card:hover {
+    transform: translateY(-8px);
+    border-color: #A6192E;
+
+    box-shadow:
+        0 15px 35px rgba(18, 62, 104, 0.12),
+        0 0 15px rgba(166, 25, 46, 0.06);
+}
+
+/* LINHA VERMELHA ANIMADA */
+
+.mvv-card::after {
+    content: "";
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 0;
+    height: 4px;
+
+    background-color: #A6192E;
+    border-radius: 0 4px 4px 0;
+
+    transition: width 0.4s ease;
+}
+
+.mvv-card:hover::after {
+    width: 100%;
+}
+
+/* FUNDO DOS ÍCONES */
+
+.mvv-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    background-color: #FFF4E5;
+    border-radius: 14px;
+    margin-bottom: 18px;
+
+    transition:
+        background-color 0.35s ease,
+        transform 0.35s ease;
+}
+
+/* ÍCONES LUCIDE */
+
+.mvv-icone svg {
+    width: 28px;
+    height: 28px;
+
+    color: #123E68;
+    stroke-width: 1.8;
+
+    transition:
+        transform 0.35s ease,
+        color 0.35s ease;
+}
+
+/* ANIMAÇÃO DO FUNDO DO ÍCONE */
+
+.mvv-card:hover .mvv-icone {
+    background-color: #FCE8EC;
+    transform: rotate(-5deg);
+}
+
+/* ANIMAÇÃO DO ÍCONE */
+
+.mvv-card:hover .mvv-icone svg {
+    transform: scale(1.15) rotate(5deg);
+    color: #A6192E;
+}
+
+/* TÍTULOS */
+
+.mvv-card h3 {
+    color: #123E68;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 18px;
+
+    transition: color 0.3s ease;
+}
+
+.mvv-card:hover h3 {
+    color: #A6192E;
+}
+
+/* DESCRIÇÕES */
+
+.mvv-card p {
+    color: #667085;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+    .mvv-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .missao-visao-valores {
+        padding: 20px 5% 40px;
+    }
+
+    .mvv-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .mvv-card {
+        min-height: auto;
+        padding: 24px;
+    }
+
+    .mvv-card h3 {
+        font-size: 19px;
+    }
+
+    .mvv-card p {
+        font-size: 14px;
+    }
+
+}
+
+/* ==========================================
+   SEÇÃO COMO AJUDAR
+========================================== */
+
+/* SEÇÃO PRINCIPAL */
+
+.como-ajudar {
+    padding: 30px 6% 70px;
+    background-color: #ffffff;
+}
+
+/* CONTAINER GERAL */
+
+.ajudar-container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* CABEÇALHO DA SEÇÃO */
+
+.ajudar-cabecalho {
+    margin-bottom: 12px;
+}
+
+.ajudar-cabecalho h2 {
+    color: #123E68;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.ajudar-cabecalho p {
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* CONTAINER DOS CARDS */
+
+.ajudar-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* CARDS */
+
+.ajudar-card {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background-color: #ffffff;
+
+    border: 1px solid #D7DEE7;
+    border-radius: 16px;
+
+    padding: 28px 24px;
+    min-height: 255px;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+/* HOVER DOS CARDS */
+
+.ajudar-card:hover {
+    transform: translateY(-8px);
+    border-color: #A6192E;
+
+    box-shadow:
+        0 15px 35px rgba(18, 62, 104, 0.12);
+}
+
+/* LINHA ANIMADA INFERIOR */
+
+.ajudar-card::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 4px;
+
+    background-color: #A6192E;
+
+    transition: width 0.4s ease;
+}
+
+.ajudar-card:hover::after {
+    width: 100%;
+}
+
+/* FUNDO DOS ÍCONES */
+
+.ajudar-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    background-color: #FFF4E5;
+    border-radius: 14px;
+
+    margin-bottom: 18px;
+
+    transition:
+        background-color 0.35s ease,
+        transform 0.35s ease;
+}
+
+/* ÍCONES LUCIDE */
+
+.ajudar-icone svg {
+    width: 28px;
+    height: 28px;
+
+    color: #123E68;
+    stroke-width: 1.8;
+
+    transition:
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+/* ANIMAÇÃO DOS ÍCONES */
+
+.ajudar-card:hover .ajudar-icone {
+    background-color: #FCE8EC;
+    transform: rotate(-5deg);
+}
+
+.ajudar-card:hover .ajudar-icone svg {
+    color: #A6192E;
+    transform: scale(1.15) rotate(5deg);
+}
+
+/* TÍTULOS DOS CARDS */
+
+.ajudar-card h3 {
+    color: #123E68;
+    font-size: 20px;
+    font-weight: 600;
+
+    margin-bottom: 18px;
+
+    transition: color 0.3s ease;
+}
+
+.ajudar-card:hover h3 {
+    color: #A6192E;
+}
+
+/* DESCRIÇÕES */
+
+.ajudar-card p {
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.7;
+
+    margin-bottom: 16px;
+}
+
+/* LINKS QUERO AJUDAR */
+
+.ajudar-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: auto;
+
+    color: #A6192E;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.ajudar-link:hover {
+    color: #861426;
+}
+
+.ajudar-link svg {
+    width: 16px;
+    height: 16px;
+
+    transition: transform 0.3s ease;
+}
+
+.ajudar-link:hover svg {
+    transform: translateX(5px);
+}
+
+/* ACESSIBILIDADE */
+
+.ajudar-link:focus-visible {
+    outline: 2px solid #A6192E;
+    outline-offset: 5px;
+    border-radius: 3px;
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+/* TABLETS */
+
+@media (max-width: 1100px) {
+
+    .ajudar-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .como-ajudar {
+        padding: 30px 5% 45px;
+    }
+
+    .ajudar-cabecalho h2 {
+        font-size: 26px;
+    }
+
+    .ajudar-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .ajudar-card {
+        min-height: 220px;
+        padding: 24px;
+    }
+
+    .ajudar-card h3 {
+        font-size: 19px;
+    }
+
+    .ajudar-card p {
+        font-size: 14px;
+    }
+}
+
+/* REDUZIR MOVIMENTOS */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ajudar-card,
+    .ajudar-card::after,
+    .ajudar-icone,
+    .ajudar-icone svg,
+    .ajudar-card h3,
+    .ajudar-link,
+    .ajudar-link svg {
+        transition: none;
+    }
+
+    .ajudar-card:hover,
+    .ajudar-card:hover .ajudar-icone,
+    .ajudar-card:hover .ajudar-icone svg,
+    .ajudar-link:hover svg {
+        transform: none;
+    }
+}
+
