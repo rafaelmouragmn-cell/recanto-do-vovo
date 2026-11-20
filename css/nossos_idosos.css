@@ -130,3 +130,170 @@
     color: #667085;
     line-height: 1.7;
 }
+/* ==================================
+   CARDS - NOSSOS IDOSOS
+================================== */
+
+.idosos-destaques {
+    padding: 10px 6% 60px;
+    background-color: #ffffff;
+}
+
+.idosos-destaques-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* CARD */
+
+.idoso-card {
+    position: relative;
+    overflow: hidden;
+
+    background-color: #ffffff;
+    border: 1px solid #D7DEE7;
+    border-radius: 16px;
+
+    padding: 24px 24px 28px;
+    min-height: 230px;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+/* HOVER */
+
+.idoso-card:hover {
+    transform: translateY(-8px);
+    border-color: #A6192E;
+    box-shadow:
+        0 14px 30px rgba(18, 62, 104, 0.10),
+        0 0 14px rgba(166, 25, 46, 0.06);
+}
+
+/* LINHA ANIMADA EMBAIXO */
+
+.idoso-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 4px;
+
+    background-color: #A6192E;
+    transition: width 0.35s ease;
+}
+
+.idoso-card:hover::after {
+    width: 100%;
+}
+
+/* ÍCONE */
+
+.idoso-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    background-color: #FFF4E5;
+    border-radius: 14px;
+
+    margin-bottom: 20px;
+
+    transition:
+        background-color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.idoso-icone svg {
+    width: 26px;
+    height: 26px;
+
+    color: #123E68;
+    stroke-width: 1.8;
+
+    transition:
+        transform 0.35s ease,
+        color 0.35s ease;
+}
+
+/* ANIMAÇÃO DO ÍCONE */
+
+.idoso-card:hover .idoso-icone {
+    background-color: #FCE8EC;
+    transform: rotate(-5deg);
+}
+
+.idoso-card:hover .idoso-icone svg {
+    transform: scale(1.12) rotate(5deg);
+    color: #A6192E;
+}
+
+/* TÍTULO */
+
+.idoso-card h3 {
+    color: #123E68;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 16px;
+
+    transition: color 0.3s ease;
+}
+
+.idoso-card:hover h3 {
+    color: #A6192E;
+}
+
+/* TEXTO */
+
+.idoso-card p {
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ==================================
+   RESPONSIVIDADE
+================================== */
+
+@media (max-width: 1100px) {
+    .idosos-destaques-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .idosos-destaques {
+        padding: 10px 5% 40px;
+    }
+
+    .idosos-destaques-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .idoso-card {
+        min-height: auto;
+        padding: 22px;
+    }
+
+    .idoso-card h3 {
+        font-size: 19px;
+    }
+
+    .idoso-card p {
+        font-size: 14px;
+    }
+}
